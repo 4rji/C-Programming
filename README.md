@@ -1,6 +1,6 @@
 # ICS 265 : C Programming  
 
-![Logo](logo.png)
+<img src="logo.png" alt="Logo" width="50%">
 
 This repository is for my programming class.  
 Here I will document all the projects, writings, and programs that I create.  
