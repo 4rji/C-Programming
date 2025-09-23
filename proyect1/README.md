@@ -8,8 +8,9 @@ The first project is about using an existing C program and enhancing it with add
 - `proyect1-arm`: ARM build
 
 ## Screenshots
-![Figure 1: Here the code in execution](gcc.png)
-![Figure 2: Here the code compiled in binary](binary.png)
+<img src="gcc.png" alt="Figure 1: Here the code in execution" width="60%" />
+
+<img src="binary.png" alt="Figure 2: Here the code compiled in binary" width="60%" />
 
 ## General Comments
 ```c
@@ -30,3 +31,6 @@ while (grade >= 0) {
 
 ## Author
 Havi Arji
+
+## Repository
+The code, binaries, and documentation can be found at: https://github.com/4rji/C-Programming/tree/main/proyect1
