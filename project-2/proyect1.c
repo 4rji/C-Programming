@@ -15,13 +15,13 @@ float result;
 int choice, num;
 do {
 // Menu
-printf("1. Calculate area of circle\n");
-printf("2. Calculate area of square\n");
-printf("3. Surface area of cube\n");
-printf("4. Surface area of cylinder\n");
+printf("1. Calculate area of circle \n");
+printf("2. Calculate area of square \n");
+printf("3. Surface area of cube \n");
+printf("4. Surface area of cylinder \n");
 
-printf("0. Quit\n");
-printf("Enter your choice:\t");
+printf("0. Quit \n");
+printf("Enter your choice: \t");
 printf("");
 //INPUT
 choice = input();
@@ -29,51 +29,53 @@ choice = input();
 switch (choice) {
 case 0: {break;}
 case 1: {
-printf("Enter radius:\n");
+printf("\nEnter radius: \n");
 num = input();
 result = areaOfCircle(num);
-printf("Area of circle=");
+printf("Area of circle= ");
 output(result);
 break; }
 case 2: {
-printf("Enter side of square:\n");
+printf("\nEnter side of square: \n");
 num = input();
 result = num * num;
 printf("Area of square=");
 output(result);
 break;}
 case 3: {
-    printf("Enter side of cube:\n");
+    printf("\nEnter side of cube: \n");
     num = input();
     result = 6 * (num * num);
-    printf("Surface area of cube=");
+    printf("Surface area of cube= ");
     output(result);
     break;
 }
 
 case 4: {
     float r, h;
-    printf("Enter radius:\n");
+    printf("\nEnter radius: \n");
     r = input();
-    printf("Enter height:\n");
+    printf("Enter height: \n");
     h = input();
     result = 2 * 3.14 * r * (h + r);
-    printf("Surface area of cylinder=");
+    printf("Surface area of cylinder= ");
     output(result);
+    printf("");
     break;
 }
 case 5: {
-printf("Enter radius:\n");
+printf("Enter radius: \n");
 num = input();
 result = 4 * (3.14 * num * num);
-printf("Area of sphere=");
+printf("Area of sphere= ");
 output(result);
 break;}
 default:
-printf("wrong Input\n");
+printf("wrong Input \n");
 }
-printf("...");
-printf("\nProject developed by Havi Arji. Sat, Oct 11 - 2025 \n");
+printf("\n\n");
+printf("Project developed by Havi Arji. Sat, Oct 11 - 2025 \n");
+printf("------------------------------\n\n");
 } while (choice != 0); 
 return 0;
 }
