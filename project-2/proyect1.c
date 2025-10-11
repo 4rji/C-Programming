@@ -1,4 +1,9 @@
 #include <stdio.h>
+
+// By havi arji
+//https://github.com/4rji/C-Programming/tree/main/project-2
+
+
 // Function prototypes
 int input();
 void output(float);
@@ -12,8 +17,12 @@ do {
 // Menu
 printf("1. Calculate area of circle\n");
 printf("2. Calculate area of square\n");
+printf("3. Surface area of cube\n");
+printf("4. Surface area of cylinder\n");
+
 printf("0. Quit\n");
 printf("Enter your choice:\t");
+printf("");
 //INPUT
 choice = input();
 //PROCESSING 
@@ -34,6 +43,26 @@ printf("Area of square=");
 output(result);
 break;}
 case 3: {
+    printf("Enter side of cube:\n");
+    num = input();
+    result = 6 * (num * num);
+    printf("Surface area of cube=");
+    output(result);
+    break;
+}
+
+case 4: {
+    float r, h;
+    printf("Enter radius:\n");
+    r = input();
+    printf("Enter height:\n");
+    h = input();
+    result = 2 * 3.14 * r * (h + r);
+    printf("Surface area of cylinder=");
+    output(result);
+    break;
+}
+case 5: {
 printf("Enter radius:\n");
 num = input();
 result = 4 * (3.14 * num * num);
@@ -43,7 +72,8 @@ break;}
 default:
 printf("wrong Input\n");
 }
-printf("\nProject developed by Sam Espana. Updated by Your name. Date: \n");
+printf("...");
+printf("\nProject developed by Havi Arji. Sat, Oct 11 - 2025 \n");
 } while (choice != 0); 
 return 0;
 }
