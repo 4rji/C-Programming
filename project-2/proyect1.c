@@ -1,70 +1,63 @@
-// fig03_04.c
-// Class-average program with sentinel-controlled iteration.
 #include <stdio.h>
-#include <time.h>
-
-// function main begins program execution
-int main(void) {
-   printf("\nProgrammer: Havi Arji\n");
-   time_t t= time(NULL);
-   struct tm tm = *localtime(&t);
-   printf("Date: %02d/%02d/%d\n\n", tm.tm_mday, tm.tm_mon + 1, tm.tm_year + 1900);
-
-   // initialization phase
-   int total = 0; // initialize total
-   int counter = 0; // initialize loop counter
-   
-
-   // processing phase
-   // get first grade from user
-   printf("%s", "Enter grade, negative to end: "); // prompt for input
-   int grade = 0; // grade value
-   scanf("%d", &grade); // read grade from user                 
-
-   // loop while sentinel value not yet read from user
-   while (grade >= 0) {
-      if (grade <=100) {
-         total = total + grade; // add grade to total
-         counter = counter + 1; // increment counter
-      } else {
-         printf("Invalid. Enter a value 0 to 100: ");
-         scanf("&d", &grade);
-      }
-
-      // get next grade from user
-      printf("%s", "Enter a netative number to end: "); // prompt for input
-      scanf("%d", &grade); // read next grade                  
-   } // end while
-
-   // termination phase
-   // if user entered at least one grade
-   if (counter != 0) {
-
-      // calculate average of all grades entered
-      double average = (double) total / counter; // avoid truncation
-
-      // display average with two digits of precision
-      printf("Class average is %.2f\n", average);
-   } // end if   
-   else { // if no grades were entered, output message
-      puts("No grades were entered");
-   } // end else
-} // end function main
-
-
-
-/**************************************************************************
- * (C) Copyright 1992-2021 by Deitel & Associates, Inc. and               *
- * Pearson Education, Inc. All Rights Reserved.                           *
- *                                                                        *
- * DISCLAIMER: The authors and publisher of this book have used their     *
- * best efforts in preparing the book. These efforts include the          *
- * development, research, and testing of the theories and programs        *
- * to determine their effectiveness. The authors and publisher make       *
- * no warranty of any kind, expressed or implied, with regard to these    *
- * programs or to the documentation contained in these books. The authors *
- * and publisher shall not be liable in any event for incidental or       *
- * consequential damages in connection with, or arising out of, the       *
- * furnishing, performance, or use of these programs.                     *
- *************************************************************************/
-
+// Function prototypes
+int input();
+void output(float);
+float areaOfCircle(int radius);
+float areaOfSquare(int side);
+int main()
+{
+float result;
+int choice, num;
+do {
+// Menu
+printf("1. Calculate area of circle\n");
+printf("2. Calculate area of square\n");
+printf("0. Quit\n");
+printf("Enter your choice:\t");
+//INPUT
+choice = input();
+//PROCESSING 
+switch (choice) {
+case 0: {break;}
+case 1: {
+printf("Enter radius:\n");
+num = input();
+result = areaOfCircle(num);
+printf("Area of circle=");
+output(result);
+break; }
+case 2: {
+printf("Enter side of square:\n");
+num = input();
+result = num * num;
+printf("Area of square=");
+output(result);
+break;}
+case 3: {
+printf("Enter radius:\n");
+num = input();
+result = 4 * (3.14 * num * num);
+printf("Area of sphere=");
+output(result);
+break;}
+default:
+printf("wrong Input\n");
+}
+printf("\nProject developed by Sam Espana. Updated by Your name. Date: \n");
+} while (choice != 0); 
+return 0;
+}
+// function to take input
+int input()
+{
+int number;
+scanf("%d", &number);
+return (number);
+}
+// function to print output
+void output(float number) { printf("%f", number); }
+//Area of a circle
+float areaOfCircle(int radius)
+{
+return radius*radius*3.14;
+}
