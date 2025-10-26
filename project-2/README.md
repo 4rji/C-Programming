@@ -9,26 +9,30 @@ This project is a simple C program that calculates different geometric areas. It
 
 ## Code
 ```c
-case 3: {
-    printf("\nEnter side of cube:\n");
-    num = input();
-    result = 6 * (num * num);
-    printf("Surface area of cube = ");
-    output(result);
-    break;
-}
-
-case 4: {
-    float r, h;
-    printf("\nEnter radius:\n");
-    r = input();
-    printf("Enter height:\n");
-    h = input();
-    result = 2 * 3.14 * r * (h + r);
-    printf("Surface area of cylinder = ");
-    output(result);
-    break;
-}
+            case 3: {
+                float l, w, h;
+                printf("\nEnter length: ");
+                l = input();
+                printf("Enter width: ");
+                w = input();
+                printf("Enter height: ");
+                h = input();
+                result = 2 * (l*h + l*w + h*w);
+                printf("Surface area of cuboid = ");
+                output(result);
+                break;
+            }
+            case 4: {
+                float r, h;
+                printf("\nEnter radius: ");
+                r = input();
+                printf("Enter height: ");
+                h = input();
+                result = 2 * 3.14 * r * (h + r);
+                printf("Surface area of cylinder = ");
+                output(result);
+                break;
+            }
 ```
 
 ## Resources
