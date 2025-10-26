@@ -4,7 +4,7 @@
 This project is a simple C program that calculates different geometric areas. It allows users to choose from multiple shapes using a menu-driven interface. Each option performs the corresponding mathematical formula and displays the result.
 
 ## Screenshots
-![Surface area of a cube](cube.webp)
+![Surface area of a cube](cuboid.webp)
 ![Surface area of a cylinder](cylinder.webp)
 
 ## Code
