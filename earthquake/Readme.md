@@ -13,4 +13,4 @@ Small C program that lists 20 Minnesota earthquakes and lets you search by city.
 
 ## Build
 ```bash
-gcc -o earthquakes main.c
+tcc -run project3.c
